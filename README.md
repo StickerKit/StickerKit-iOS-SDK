@@ -1,27 +1,51 @@
-# StickerKit
 
-[![Version](https://img.shields.io/cocoapods/v/StickerKit.svg?style=flat)](http://cocoapods.org/pods/StickerKit)
-[![License](https://img.shields.io/cocoapods/l/StickerKit.svg?style=flat)](http://cocoapods.org/pods/StickerKit)
-[![Platform](https://img.shields.io/cocoapods/p/StickerKit.svg?style=flat)](http://cocoapods.org/pods/StickerKit)
+![Add Framework](https://app.stickerkit.io/images/StickerKit-Logo-Text.png)
 
-## Example
+# StickerKit-iOS-SDK
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+Use this SDK to integrate StickerKit into your iOS Application.
 
 ## Installation
 
-StickerKit is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+StickerKit is available through [Carthage](http://github.com/Carthage/Carthage).
 
-```ruby
-pod "StickerKit"
+To add StickerKit to your App:
+
+1 - Make sure you have the most recent version of Carthage
+
 ```
+brew install carthage
+```
+2 - Create a Cartfile with contents:
+
+```
+github “StickerKit/StickerKit-iOS-SDK”
+```
+
+3 - Go to your project in Terminal and run:
+
+```
+carthage update --platform iOS
+```
+
+4 - The StickerKit Framework will be built inside the Carthage > iOS > Build folder. Drag that into your target's 'Linked Frameworks and Libraries'
+
+![Add Framework](Screenshots/carthage-add-stickerkit.gif)
+
+5 - Finally, go into your target's 'Build Phases' section and in the Copy Files section add StickerKit
+
+
+![Add Framework](Screenshots/add-framework.png)
+
+## Working with Storyboard
+
+StickerKit contains an extension on MSStickerView, called SKStickerView. It is useful because it comes prebuilt to help you track Analytics on your stickers. Make sure you pick the Module to be StickerKit when using SKStickerView in Storyboard.
+
+![Add SKStickerView in Storyboard](Screenshots/add-SKStickerView-to-storyboard.png)
 
 ## Author
 
-Cory Alder, coryalder@gmail.com
+Cory Alder & Daniel Mathews, StickerKit
 
 ## License
 
