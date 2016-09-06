@@ -9,11 +9,11 @@
 import Foundation
 import Messages
 
-class SKStickerView : MSStickerView {
+open class SKStickerView : MSStickerView {
     
-    var SKSticker: Sticker?
+    open var SKSticker: Sticker?
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         setupTapRecognizer()
@@ -47,7 +47,7 @@ class SKStickerView : MSStickerView {
         }
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         if let s = SKSticker{
             SKEvent.track(event: .sentSticker, sticker: s)
