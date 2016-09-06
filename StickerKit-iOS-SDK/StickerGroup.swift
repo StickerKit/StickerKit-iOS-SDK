@@ -2,7 +2,6 @@
 //  Group.swift
 //  StickerKit-iOS-Example-App
 //
-//  Created by Daniel Mathews on 2016-07-21.
 //  Copyright © 2016 StickerKit. All rights reserved.
 //
 

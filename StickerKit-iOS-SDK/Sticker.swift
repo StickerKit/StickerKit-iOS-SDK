@@ -49,7 +49,19 @@ open class Sticker: Hashable {
     }
     
     var cacheFilename: String {
-        return String(id)
+        
+        guard let indexofQ = self.url.absoluteString.range(of: "?", options: .backwards)?.lowerBound else {
+            return String(id)
+        }
+        
+        let substring2 = self.url.absoluteString.substring(to: indexofQ)
+        
+        guard let indexofDot = substring2.range(of: ".", options: .backwards)?.lowerBound else {
+            return String(id)
+        }
+        
+        let fileType = substring2.substring(from: indexofDot)
+        return String(id) + fileType
     }
 
     //Equatable Protocol

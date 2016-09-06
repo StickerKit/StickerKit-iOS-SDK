@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8490B38D1D7A2053009FB77F"
-               BuildableName = "StickerKit-iOS-SDK.framework"
+               BuildableName = "StickerKit.framework"
                BlueprintName = "StickerKit-iOS-SDK"
                ReferencedContainer = "container:StickerKit-iOS-SDK.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8490B38D1D7A2053009FB77F"
-            BuildableName = "StickerKit-iOS-SDK.framework"
+            BuildableName = "StickerKit.framework"
             BlueprintName = "StickerKit-iOS-SDK"
             ReferencedContainer = "container:StickerKit-iOS-SDK.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8490B38D1D7A2053009FB77F"
-            BuildableName = "StickerKit-iOS-SDK.framework"
+            BuildableName = "StickerKit.framework"
             BlueprintName = "StickerKit-iOS-SDK"
             ReferencedContainer = "container:StickerKit-iOS-SDK.xcodeproj">
          </BuildableReference>

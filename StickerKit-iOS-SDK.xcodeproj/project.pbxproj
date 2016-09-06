@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		8490B3931D7A2053009FB77F /* StickerKit-iOS-SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 8490B3911D7A2053009FB77F /* StickerKit-iOS-SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8490B3AF1D7A263C009FB77F /* MSSticker-StickerKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490B3AB1D7A263C009FB77F /* MSSticker-StickerKit.swift */; };
-		8490B3B01D7A263C009FB77F /* SKImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490B3AC1D7A263C009FB77F /* SKImageManager.swift */; };
-		8490B3B11D7A263C009FB77F /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490B3AD1D7A263C009FB77F /* Sticker.swift */; };
-		8490B3B21D7A263C009FB77F /* StickerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490B3AE1D7A263C009FB77F /* StickerGroup.swift */; };
+		84A73F981D7F36650040259D /* MSSticker-StickerKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A73F911D7F36650040259D /* MSSticker-StickerKit.swift */; };
+		84A73F991D7F36650040259D /* SKEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A73F921D7F36650040259D /* SKEvent.swift */; };
+		84A73F9A1D7F36650040259D /* SKImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A73F931D7F36650040259D /* SKImageManager.swift */; };
+		84A73F9B1D7F36650040259D /* SKStickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A73F941D7F36650040259D /* SKStickerView.swift */; };
+		84A73F9C1D7F36650040259D /* SKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A73F951D7F36650040259D /* SKUser.swift */; };
+		84A73F9D1D7F36650040259D /* Sticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A73F961D7F36650040259D /* Sticker.swift */; };
+		84A73F9E1D7F36650040259D /* StickerGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A73F971D7F36650040259D /* StickerGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8490B38E1D7A2053009FB77F /* StickerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StickerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8490B3911D7A2053009FB77F /* StickerKit-iOS-SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StickerKit-iOS-SDK.h"; sourceTree = "<group>"; };
 		8490B3921D7A2053009FB77F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8490B3AB1D7A263C009FB77F /* MSSticker-StickerKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MSSticker-StickerKit.swift"; sourceTree = "<group>"; };
-		8490B3AC1D7A263C009FB77F /* SKImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKImageManager.swift; sourceTree = "<group>"; };
-		8490B3AD1D7A263C009FB77F /* Sticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
-		8490B3AE1D7A263C009FB77F /* StickerGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerGroup.swift; sourceTree = "<group>"; };
+		84A73F911D7F36650040259D /* MSSticker-StickerKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MSSticker-StickerKit.swift"; sourceTree = "<group>"; };
+		84A73F921D7F36650040259D /* SKEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKEvent.swift; sourceTree = "<group>"; };
+		84A73F931D7F36650040259D /* SKImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKImageManager.swift; sourceTree = "<group>"; };
+		84A73F941D7F36650040259D /* SKStickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKStickerView.swift; sourceTree = "<group>"; };
+		84A73F951D7F36650040259D /* SKUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKUser.swift; sourceTree = "<group>"; };
+		84A73F961D7F36650040259D /* Sticker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sticker.swift; sourceTree = "<group>"; };
+		84A73F971D7F36650040259D /* StickerGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +60,13 @@
 		8490B3901D7A2053009FB77F /* StickerKit-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				8490B3AB1D7A263C009FB77F /* MSSticker-StickerKit.swift */,
-				8490B3AC1D7A263C009FB77F /* SKImageManager.swift */,
-				8490B3AD1D7A263C009FB77F /* Sticker.swift */,
-				8490B3AE1D7A263C009FB77F /* StickerGroup.swift */,
+				84A73F911D7F36650040259D /* MSSticker-StickerKit.swift */,
+				84A73F921D7F36650040259D /* SKEvent.swift */,
+				84A73F931D7F36650040259D /* SKImageManager.swift */,
+				84A73F941D7F36650040259D /* SKStickerView.swift */,
+				84A73F951D7F36650040259D /* SKUser.swift */,
+				84A73F961D7F36650040259D /* Sticker.swift */,
+				84A73F971D7F36650040259D /* StickerGroup.swift */,
 				8490B3911D7A2053009FB77F /* StickerKit-iOS-SDK.h */,
 				8490B3921D7A2053009FB77F /* Info.plist */,
 			);
@@ -145,10 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8490B3AF1D7A263C009FB77F /* MSSticker-StickerKit.swift in Sources */,
-				8490B3B11D7A263C009FB77F /* Sticker.swift in Sources */,
-				8490B3B01D7A263C009FB77F /* SKImageManager.swift in Sources */,
-				8490B3B21D7A263C009FB77F /* StickerGroup.swift in Sources */,
+				84A73F9C1D7F36650040259D /* SKUser.swift in Sources */,
+				84A73F9D1D7F36650040259D /* Sticker.swift in Sources */,
+				84A73F9B1D7F36650040259D /* SKStickerView.swift in Sources */,
+				84A73F9E1D7F36650040259D /* StickerGroup.swift in Sources */,
+				84A73F991D7F36650040259D /* SKEvent.swift in Sources */,
+				84A73F981D7F36650040259D /* MSSticker-StickerKit.swift in Sources */,
+				84A73F9A1D7F36650040259D /* SKImageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

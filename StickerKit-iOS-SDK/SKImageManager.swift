@@ -36,6 +36,8 @@ open class SKImageManager {
     
     fileprivate static var _sharedInstance: SKImageManager?
     
+    internal static var user:SKUser?
+    
     // MARK: - Public setup methods
     
     open static var sharedInstance: SKImageManager {
@@ -46,15 +48,21 @@ open class SKImageManager {
         return si
     }
     
-    open static func setup(project project: String, appGroup: String? = nil) {
-        guard _sharedInstance == nil else {
-            fatalError("Do not setup your SKImageManager more than once per run.")
-        }
+    open static func setup(_ project: String, appGroup: String? = nil, trackUserAnalytics:Bool = true) {
+
+//        guard _sharedInstance == nil else {
+//            fatalError("Do not setup your SKImageManager more than once per run.")
+//        }
         
         if let appGroup = appGroup {
             _sharedInstance = SKImageManager(project: project, appGroup: appGroup)
         } else {
             _sharedInstance = SKImageManager(project: project)
+        }
+        
+        if trackUserAnalytics{
+            user = getSKUser(projectID: project)
+            SKEvent.track(event: .openedApp)
         }
     }
     
@@ -100,6 +108,21 @@ open class SKImageManager {
         createStickersFolder()
     }
     
+    fileprivate static func getSKUser(projectID: String) -> SKUser {
+        
+        let userDefaults = UserDefaults.standard
+        guard let userUUID = userDefaults.string(forKey: SKUser.PropertyKey.SKUserUserDefaultsKey) else {
+            
+            let user = SKUser(projectID: projectID)
+            userDefaults.set(user.UUID, forKey: SKUser.PropertyKey.SKUserUserDefaultsKey)
+            userDefaults.synchronize()
+            return user
+        }
+        
+        return SKUser(UUID: userUUID, projectID: projectID)
+        
+    }
+    
     // MARK: - Public interface:
     
     /**
@@ -134,7 +157,6 @@ open class SKImageManager {
      */
     fileprivate func stickerGroups(_ completion:@escaping ([StickerGroup]) -> ()) {
         
-        
         let endpoint = "https://app.stickerkit.io/api/v1/project/\(self.projectID)"
         
         guard let endpointUrl = URL(string: endpoint) else {
@@ -148,9 +170,20 @@ open class SKImageManager {
                     
                     guard let jsonData = jsonData, let JSON = try JSONSerialization.jsonObject(with: jsonData, options: []) as? [String:AnyObject] else {
                         
-                        DispatchQueue.main.async {
-                            completion([StickerGroup]())
+                        // Load for cache if possible
+                        guard self.hasLocalMetadata else {
+                            DispatchQueue.main.async {
+                                completion([StickerGroup]())
+                            }
+                            return
                         }
+                        
+                        let stickerGroups = try self.cachedStickerGroups()
+                        
+                        DispatchQueue.main.async {
+                            completion(stickerGroups)
+                        }
+                        
                         return
                     }
                     
@@ -270,7 +303,6 @@ open class SKImageManager {
             
             do {
                 let sticker = try MSSticker(contentsOfFileURL: localURL, localizedDescription: sticker.descriptionEn ?? "")
-                
                 completion(sticker)
             } catch {
                 print("Could not convert Sticker object to MSSticker object - Error \(error)")
@@ -389,7 +421,9 @@ open class SKImageManager {
     fileprivate func decache(_ sticker:Sticker) throws {
         let stickerPathURL = self.stickersDirectory
         let thisStickerPathURL = stickerPathURL.appendingPathComponent(sticker.cacheFilename)
-        try fileManager.removeItem(at: thisStickerPathURL)
+        if fileManager.fileExists(atPath: thisStickerPathURL.path){
+            try fileManager.removeItem(at: thisStickerPathURL)
+        }
     }
     
     // MARK: - Metadata persistance
