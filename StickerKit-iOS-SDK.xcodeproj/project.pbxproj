@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8490B38E1D7A2053009FB77F /* StickerKit-iOS-SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "StickerKit-iOS-SDK.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8490B38E1D7A2053009FB77F /* StickerKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StickerKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8490B3911D7A2053009FB77F /* StickerKit-iOS-SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StickerKit-iOS-SDK.h"; sourceTree = "<group>"; };
 		8490B3921D7A2053009FB77F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8490B3AB1D7A263C009FB77F /* MSSticker-StickerKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MSSticker-StickerKit.swift"; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		8490B38F1D7A2053009FB77F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8490B38E1D7A2053009FB77F /* StickerKit-iOS-SDK.framework */,
+				8490B38E1D7A2053009FB77F /* StickerKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +93,7 @@
 			);
 			name = "StickerKit-iOS-SDK";
 			productName = "StickerKit-iOS-SDK";
-			productReference = 8490B38E1D7A2053009FB77F /* StickerKit-iOS-SDK.framework */;
+			productReference = 8490B38E1D7A2053009FB77F /* StickerKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -268,7 +268,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.stickerkit.StickerKit-iOS-SDK";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = StickerKit;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -289,7 +289,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "io.stickerkit.StickerKit-iOS-SDK";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = StickerKit;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
