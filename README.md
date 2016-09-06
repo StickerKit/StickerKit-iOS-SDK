@@ -1,5 +1,7 @@
 
-![Add Framework](https://app.stickerkit.io/images/StickerKit-Logo-Text.png)
+<p align="center">
+  <img src ="https://app.stickerkit.io/images/StickerKit-Logo-Text.png" />
+</p>
 
 # StickerKit-iOS-SDK
 
